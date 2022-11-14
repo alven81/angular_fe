@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="alert alert-success">
+	template: `<div class="alert alert-success" [hidden]="displayNotification">
   				<p>
 					This website uses cookies to provide better user experience.
 				</p>
@@ -15,5 +15,5 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  displayNotification: boolean = true;
 }
